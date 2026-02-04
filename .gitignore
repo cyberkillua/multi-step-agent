@@ -1,0 +1,30 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Data/output files
+data/
+embeddings.json
+chunks.json
+
+# PDFs (if you don't want to commit them)
+pdfs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
