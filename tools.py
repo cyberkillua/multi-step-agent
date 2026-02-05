@@ -47,20 +47,24 @@ calculator_tools = [
             "required": ["a", "b"],
         },
     },
+    {
+        "name": "done",
+        "description": "Call this when you have the final answer",
+        "parameters": {"answer": "number"},
+    },
 ]
 
 
 def execute_calculator_function(name: str, args: dict):
-    a = float(args["a"])
-    b = float(args["b"])
-
     if name == "add":
-        return a + b
+        return float(args["a"]) + float(args["b"])
     elif name == "subtract":
-        return a - b
+        return float(args["a"]) - float(args["b"])
     elif name == "multiply":
-        return a * b
+        return float(args["a"]) * float(args["b"])
     elif name == "divide":
-        return a / b
+        return float(args["a"]) / float(args["b"])
+    elif name == "done":
+        return float(args["answer"])
     else:
         return "Unknown function"
